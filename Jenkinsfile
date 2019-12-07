@@ -7,7 +7,7 @@ node {
   } 
   stage('Build image') {
     sh 'pwd'
-    app = docker.build("petclinicimage")
+    app = docker.build("prawinkorvi/petclinicimage")
   
   }
   stage('Push image') {
