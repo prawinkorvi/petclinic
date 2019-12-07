@@ -16,6 +16,6 @@ node {
     }
   }
   stage('Deploy') {
-    sh '/usr/local/bin/helm upgrade --install petclinic /var/lib/jenkins/petclinic/ --recreate-pods --set image.repository=https://registry.hub.docker.com/prawinkorvi/petclinicimage --set image.tag=${BUILD_NUMBER}'
+    sh '/usr/local/bin/helm upgrade --install petclinic /var/lib/jenkins/petclinic/ --recreate-pods --set image.repository=registry.hub.docker.com/prawinkorvi/petclinicimage --set image.tag=${BUILD_NUMBER}'
   }
 }
