@@ -5,6 +5,10 @@ node {
     checkout scm
 	
   }
+  stage('mvn package'){
+   sh 'mvn clean package'
+
+  } 
   stage('Build image') {
     app = docker.build("petclinicimage")
   
