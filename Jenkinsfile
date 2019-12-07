@@ -22,3 +22,4 @@ node {
   stage('Deploy') {
     sh '/usr/local/bin/helm upgrade --install petclinic /var/lib/jenkins/petclinic/ --recreate-pods --set image.repository=https://registry.hub.docker.com --set image.tag=${BUILD_NUMBER}'
   }
+}
