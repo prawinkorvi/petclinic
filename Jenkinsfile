@@ -1,5 +1,5 @@
 pipeline {
-	agent { label 'kpk' }
+	agent any
     stages {
         stage('Build on k8 ') {
             steps {           
