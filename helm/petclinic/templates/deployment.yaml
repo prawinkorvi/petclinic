@@ -25,6 +25,13 @@ spec:
       - name: petclinic-container
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         imagePullPolicy: Always
+        resources:
+          limits:
+            cpu: "0.5"
+            memory: "500Mi"
+          requests:
+            cpu: "0.5"
+            memory: "500Mi"
         ports:
         - containerPort: 8080
       imagePullSecrets:
